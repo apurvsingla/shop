@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/product.css">
+<h2 class="text-center mt-2">Winter Collection</h2>
+<div>
+<div class="ex container">
+<% for (i in winter){ %>
+  <div class="card" style="margin: 2%;">
+    <img src="<%= winter[i].file %>" alt="file" class="card-img2">
+    <div class="card-img">
+      <h5 class="card-title"><%= winter[i].name %> </h5>
+      <p class="card-text"> <%= winter[i].productDesc %> </p>
+      <p class="card-text"> <%= winter[i].price %> </p>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+<% } %>  
+</div>
+</div>

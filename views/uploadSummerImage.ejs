@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/summer.css">
+
+<div class="card-columns">
+    
+        <% for (i in product){ %>
+            <div class="card">
+            <form action="/auth/uploadSummerImage/<%= product[i]._id %>" enctype="multipart/form-data" method="POST">
+                <img class="card-img-top i" src="<%= product[i].file %>" alt="Card image cap">
+                <input type="file" name="file">
+                <div class="card-body">
+                    <h5 class="card-title"><%= product[i].name %></h5>
+                    <p class="card-text"><%= product[i].productDesc %></p>
+                </div>
+                <div class="card-footer">
+                    price:<small class="text-muted"> <%= product[i].price %> </small>
+                    <button class="btn btn-block btn-primary">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+        <% } %>  
+    
+</div>

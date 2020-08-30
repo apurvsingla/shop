@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/summer.css">
+
+<div class="card-columns container mt-4">
+    
+        <% for (i in winter){ %>
+            <div class="card">
+            <form action="/auth/uploadWinterImage/<%= winter[i]._id %>" enctype="multipart/form-data" method="POST">
+                <img class="card-img-top i" src="<%= winter[i].file %>" alt="Card image cap">
+                <input type="file" name="file">
+                <div class="card-body">
+                    <h5 class="card-title"><%= winter[i].name %></h5>
+                    <p class="card-text"><%= winter[i].winterDesc %></p>
+                </div>
+                <div class="card-footer">
+                    price:<small class="text-muted"> <%= winter[i].price %> </small>
+                    <button class="btn btn-block btn-primary">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+        <% } %>  
+    
+</div>

@@ -18,5 +18,9 @@ router.get('/uploadSummerCollection', authController.upload);
 router.post('/uploadSummerCollection/post',authController.postData);
 router.get('/uploadWinterCollection', authController.uploadWinter);
 router.post('/uploadWinterCollection/post',authController.postWinterData);
+router.get('/uploadSummerCollectionPage', authController.uploadSummerCollectionPage);
+router.post('/uploadSummerCollectionData/post',authController.uploadSummerCollectionData);
+router.get('/uploadWinterCollectionPage', authController.uploadWinterCollectionPage);
+router.post('/uploadWinterCollectionData/post',authController.uploadWinterCollectionData);
 
 module.exports = router;

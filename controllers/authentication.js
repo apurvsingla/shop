@@ -2,6 +2,8 @@ const User = require('../models/userSchema');
 const {authSchema} = require('../models/validationSchema');
 const Upload = require('../models/upload');
 const Winter = require('../models/winter');
+const SummerCollection = require('../models/summerProduct');
+const WinterCollection = require('../models/winterProducts');
 
 const asyncPageRender = (name,data) => (req,res) => {
     if(req.isAuthenticated()){
@@ -94,3 +96,20 @@ module.exports.postWinterData = async (req,res) => {
     winter.save();
     return res.redirect('back');
 }
+
+module.exports.uploadSummerCollectionData = async(req,res) => {
+    let summer = new SummerCollection(req.body);
+    summer.save();
+    return res.redirect('back');
+}
+
+module.exports.uploadSummerCollectionPage = adminAccess('uploadSummerCollectionPage', 'Summer Products');
+
+
+module.exports.uploadWinterCollectionData = async(req,res) => {
+    let winter = new WinterCollection(req.body);
+    winter.save();
+    return res.redirect('back');
+}
+
+module.exports.uploadWinterCollectionPage = adminAccess('uploadWinterCollectionPage', 'Winter Products');

@@ -1,0 +1,39 @@
+.ex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+}
+
+.card{
+    height: 38%;
+    width: 25%;
+}
+
+.card-img2{
+    height: 225px;
+    object-fit: cover;
+}
+
+.card-img{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+h5{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+p{
+    color: black;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 492px){
+    .card{
+        width: 100%;
+    }
+}

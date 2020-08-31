@@ -9,6 +9,18 @@ const cartSchema = new mongoose.Schema({
     },
     cart__quantity: {
         type: Number
+    },
+    winter: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'winterCollection'
+    },
+    summer: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'SummerCollection'
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     }
 });
 

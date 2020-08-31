@@ -8,6 +8,6 @@ router.get('/done', homeController.done);
 router.get('/admin', homeController.admin);
 //use
 router.use('/auth', require('./auth'));
-router.use('/shop-cart', require('./cart'));
+router.use('/', require('./cart'));
 router.use('/', require('./product'));
 module.exports = router;

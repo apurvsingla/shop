@@ -1,0 +1,9 @@
+<div class="cart container mt-4 text-center p-4">
+    <form action="/submit" method="POST">
+        <h1>Cart</h1>
+        <br><br>
+        <p style="font-size: 1.25rem;">Total-Cart-Price: <strong><%= data.price %></strong></p>
+        <p style="font-size: 1.25rem;">Total Items: <strong><%= data.quantity %></strong></p> 
+        <button class="btn btn-lg btn-primary">Purchase</button>
+    </form>
+</div>

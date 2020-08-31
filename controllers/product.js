@@ -95,7 +95,7 @@ module.exports.winter = async (req,res) => {
 
 
 module.exports.winterPage = async (req,res) => {
-    let winter = await WinterCollection.find({});
+    let winter = await Winter.find({});
     return res.render('uploadWinterImage', {
         title: "Winter Collection",
         winter: winter
@@ -111,7 +111,7 @@ module.exports.uploadWinterImage = async (req,res) => {
                 console.log('*****Multer Error: ', err);
             }
             if (req.file) {
-                if (winter.file !== "") {
+                if (winter.file) {
                     fs.unlinkSync(path.join(__dirname, '..', upload.file));
                 }
                 winter.file = Winter.productPath + '/' + req.file.filename

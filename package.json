@@ -24,7 +24,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "debug": "nodemon --inspect app.js"
   },
   "author": "Apurv Singla",

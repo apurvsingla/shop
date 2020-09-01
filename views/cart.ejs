@@ -1,9 +1,17 @@
 <div class="cart container mt-4 text-center p-4">
-    <form action="/submit" method="POST">
+    <form action="/submit" method="GET">
         <h1>Cart</h1>
         <br><br>
-        <p style="font-size: 1.25rem;">Total-Cart-Price: <strong><%= data.price %></strong></p>
-        <p style="font-size: 1.25rem;">Total Items: <strong><%= data.quantity %></strong></p> 
+        <% if(data){ %> 
+            <p style="font-size: 1.25rem;">Total-Cart-Price: <strong><%= data.price %></strong></p>
+            <p style="font-size: 1.25rem;">Total Items: <strong><%= data.quantity %></strong></p> 
+        <% }else{ %>
+            <p style="font-size: 1.25rem;">Total-Cart-Price: <strong>0</strong></p>
+            <p style="font-size: 1.25rem;">Total Items: <strong>0</strong></p> 
+        <% } %> 
+        
         <button class="btn btn-lg btn-primary">Purchase</button>
     </form>
 </div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>

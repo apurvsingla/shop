@@ -1,7 +1,7 @@
 const Cart = require('../models/cartSchema');
 const User = require('../models/userSchema');
-const instance = require('../config/razorpay');
-const request = require('request');
+// const instance = require('../config/razorpay');
+// const request = require('request');
 
 module.exports.addToCart = async (req,res) => {
     if(req.isAuthenticated()){
